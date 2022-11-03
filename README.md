@@ -6,7 +6,7 @@ Using the same server setup from stage one:
 
 - Create an (POST) api endoint that takes the following sample json:
 
-```json
+```
 { "operation_type": Enum <addition | subtraction | multiplication> , "x": Integer, "y": Integer }
 ```
 
@@ -18,13 +18,12 @@ Using the same server setup from stage one:
 
 Sample Input:
 
-```json
+```
 { "operation_type": Enum <addition | subtraction | multiplication> , "x": Integer, "y": Integer }
 ```
 
 - Sample Response Format:
 
-```json
+```
 { "slackUsername": String, "result": Integer, "operation_type": Enum.value }
-
 ```
