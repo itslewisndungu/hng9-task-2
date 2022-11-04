@@ -1,11 +1,16 @@
 const express = require("express");
 const { body, validationResult } = require("express-validator");
+const { validate_operation_type, perform_operation } = require("./utils");
 
-const {validate_operation_type, perform_operation} = require ('./utils')
 const app = express();
-
 const port = 3000;
 
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+app.use(morgan("short"));
 app.use(express.json());
 
 app.get("/", (_, res) => {
