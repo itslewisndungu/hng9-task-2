@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
+const morgan = require("morgan");
 const { body, validationResult } = require("express-validator");
 const { validate_operation_type, perform_operation } = require("./utils");
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(
   cors({
