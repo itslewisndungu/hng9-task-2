@@ -26,8 +26,6 @@ app.post(
     operation_type = req.body["operation_type"];
     x = req.body["x"];
     y = req.body["y"];
-    data = req.body
-      console.log(...data)
     const result = perform_operation(operation_type, x, y);
 
     const response = {
